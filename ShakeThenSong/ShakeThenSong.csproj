@@ -7,8 +7,8 @@
     <ProjectGuid>{E4815165-DCD7-4CFC-A9AA-99897D9DD53D}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ShakeThenSong</RootNamespace>
-    <AssemblyName>ShakeThenSong</AssemblyName>
+    <RootNamespace>ShakeAndSong</RootNamespace>
+    <AssemblyName>ShakeAndSong</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.16299.0</TargetPlatformVersion>
@@ -114,6 +114,7 @@
     <None Include="ShakeThenSong_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\DesktopScreenshot1.png" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-125.png" />
     <Content Include="Assets\LargeTile.scale-150.png" />

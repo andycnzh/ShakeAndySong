@@ -103,8 +103,15 @@ namespace ShakeThenSong
         /// <param name="e">Event args</param>
         private void BtnPlay_Click(object sender, RoutedEventArgs e)
         {
-            this.Player.Play();
-            txtMessage.Text = "Enjoy your music";
+            if (PlaybackList.Items.Count > 0)
+            {
+                this.Player.Play();
+                txtMessage.Text = "Enjoy your music.";
+            }
+            else
+            {
+                txtMessage.Text = "Sorry, there is no music in your music library.";
+            }
         }
 
         /// <summary>
@@ -124,15 +131,16 @@ namespace ShakeThenSong
         /// <returns>Return a value indicate the player is running or not</returns>
         private bool PlayerStateIsRunning()
         {
-            if (this.Player.PlaybackSession.PlaybackState == MediaPlaybackState.Playing)
+            if (PlaybackList.Items.Count > 0)
             {
-                txtMessage.Text = "Enjoy your music";
-                return true;
+                if (this.Player.PlaybackSession.PlaybackState == MediaPlaybackState.Playing)
+                {
+                    txtMessage.Text = "Enjoy your music.";
+                    return true;
+                }
             }
-            else
-            {
-                return false;
-            }
+
+            return false;
         }
 
         /// <summary>

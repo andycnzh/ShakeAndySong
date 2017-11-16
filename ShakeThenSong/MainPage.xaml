@@ -16,7 +16,7 @@
         <StackPanel Margin="10,10,10,10" Grid.Row="0">
             <TextBlock Text="ShakeThenSong"/>
             <TextBlock TextWrapping="Wrap">
-                    摇晃您的手机，应用将会从你的音乐库中随机播放歌曲。享用吧！如果您的音乐库没有歌曲，则不会播放音乐。
+                Shake your phone and apps will play songs randomly from your music library. Enjoy! If your library does not have songs, it will not play music.
             </TextBlock>
         </StackPanel>
 
