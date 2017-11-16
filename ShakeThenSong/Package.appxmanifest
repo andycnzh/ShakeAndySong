@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap mp uap3">
-  <Identity Name="30fc37d8-dc1b-4b29-adca-b1f67d92c556" Publisher="CN=admin" Version="1.0.0.0" />
-  <mp:PhoneIdentity PhoneProductId="30fc37d8-dc1b-4b29-adca-b1f67d92c556" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="56187AndyCnZh.ShakeThenSong" Publisher="CN=47114BA9-C4F6-4A07-B7AB-D56A63677BD0" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="9c64c7f6-5f57-4e1f-a478-fc89c86ccd7b" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>ShakeThenSong</DisplayName>
-    <PublisherDisplayName>AndyCnzh</PublisherDisplayName>
+    <PublisherDisplayName>AndyCnZh</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
