@@ -104,6 +104,35 @@ namespace ShakeThenSong
         private void BtnPlay_Click(object sender, RoutedEventArgs e)
         {
             this.Player.Play();
+            txtMessage.Text = "Enjoy your music";
+        }
+
+        /// <summary>
+        /// Play songs if MediaPlay is not running
+        /// </summary>
+        private void PlaySongs()
+        {
+            if (!this.PlayerStateIsRunning())
+            {
+                this.Player.Play();
+            }
+        }
+
+        /// <summary>
+        /// Check the MediaPlay state
+        /// </summary>
+        /// <returns>Return a value indicate the player is running or not</returns>
+        private bool PlayerStateIsRunning()
+        {
+            if (this.Player.PlaybackSession.PlaybackState == MediaPlaybackState.Playing)
+            {
+                txtMessage.Text = "Enjoy your music";
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         /// <summary>
@@ -118,9 +147,20 @@ namespace ShakeThenSong
                 () =>
                 {
                     AccelerometerReading reading = args.Reading;
-                    txtXAxis.Text = string.Format("{0,5:0.00}", reading.AccelerationX);
-                    txtYAxis.Text = string.Format("{0,5:0.00}", reading.AccelerationY);
-                    txtZAxis.Text = string.Format("{0,5:0.00}", reading.AccelerationZ);
+                    ////txtXAxis.Text = string.Format("{0,5:0.00}", reading.AccelerationX);
+                    ////txtYAxis.Text = string.Format("{0,5:0.00}", reading.AccelerationY);
+                    ////txtZAxis.Text = string.Format("{0,5:0.00}", reading.AccelerationZ);
+
+                    double x1 = 0;
+                    double x2 = 0;
+                    x1 = reading.AccelerationX;
+                    x2 = Math.Abs(x2) + Math.Abs(x1);
+
+                    if (x2 > 1)
+                    {
+                        txtMessage.Text = "Yes, will play music soon.";
+                        PlaySongs();
+                    }
                 });
         }
     }
