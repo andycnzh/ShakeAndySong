@@ -1,13 +1,25 @@
-﻿<Page
+﻿<Page x:Name="pageMain"
     x:Class="ShakeThenSong.MainPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ShakeThenSong"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Loaded="Page_Loaded">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.RowDefinitions>
+            <RowDefinition Height="695*"/>
+            <RowDefinition Height="22*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="53,142,0,0" VerticalAlignment="Top" Height="46" Width="122" Click="BtnPlay_Click"/>
+        <TextBlock x:Name="txtMessage" HorizontalAlignment="Left" Margin="56,225,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top" Height="109" Width="243"/>
+        <TextBlock HorizontalAlignment="Left" Height="25" Margin="8,11,0,0" TextWrapping="Wrap" Text="X-axis:" VerticalAlignment="Top" Width="62" />
+        <TextBlock HorizontalAlignment="Left" Height="27" Margin="8,45,0,0" TextWrapping="Wrap" Text="Y-axis:" VerticalAlignment="Top" Width="62" />
+        <TextBlock HorizontalAlignment="Left" Height="23" Margin="8,80,0,0" TextWrapping="Wrap" Text="Z-axis:" VerticalAlignment="Top" Width="62" />
+        <TextBlock x:Name="txtXAxis" HorizontalAlignment="Left" Height="25" Margin="70,11,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="70" />
+        <TextBlock x:Name="txtYAxis" HorizontalAlignment="Left" Height="25" Margin="70,46,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="70" />
+        <TextBlock x:Name="txtZAxis" HorizontalAlignment="Left" Height="25" Margin="70,79,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="70" />
     </Grid>
 </Page>
