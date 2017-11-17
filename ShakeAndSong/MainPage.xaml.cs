@@ -119,9 +119,17 @@ namespace ShakeThenSong
         /// </summary>
         private void PlaySongs()
         {
-            if (!this.PlayerStateIsRunning())
+            if (PlaybackList.Items.Count > 0)
             {
-                this.Player.Play();
+                if (!this.PlayerStateIsRunning())
+                {
+                    this.Player.Play();
+                    txtMessage.Text = "Enjoy your music.";
+                }
+            }
+            else
+            {
+                txtMessage.Text = "Sorry, there is no music in your music library.";
             }
         }
 
