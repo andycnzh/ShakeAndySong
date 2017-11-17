@@ -14,7 +14,7 @@
         </Grid.RowDefinitions>
 
         <StackPanel Margin="10,10,10,10" Grid.Row="0">
-            <TextBlock Text="ShakeThenSong"/>
+            <TextBlock Text="Shake And Song"/>
             <TextBlock TextWrapping="Wrap">
                 Shake your phone and apps will play songs randomly from your music library. Enjoy! If your library does not have songs, it will not play music.
             </TextBlock>
